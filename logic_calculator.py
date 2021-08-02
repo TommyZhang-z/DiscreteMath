@@ -1,6 +1,7 @@
 class MyInt(int):
-    def implies(self, q):
+    def MI(self, q):
         """
+        material implication
         单向导致 p -> q
         :param q:
         :return:逻辑判断结果
@@ -8,15 +9,7 @@ class MyInt(int):
         return MyInt(not self or q)
 
 
-def zeros(num):
-    return [MyInt(0) for _ in range(num)]
-
-
-def ones(num):
-    return [MyInt(1) for _ in range(num)]
-
-
-def tautology(T_list):
+def T(T_list):
     """
     结果全为True
     :param T_list:
@@ -25,14 +18,12 @@ def tautology(T_list):
     return all(T_list)
 
 
-def material_equivalence(p, q):
-    """
-    双向导致 p <-> q
-    :param p:
-    :param q:
-    :return:逻辑判断结果
-    """
-    return MyInt(not (p ^ q))
+def zeros(num):
+    return [MyInt(0) for _ in range(num)]
+
+
+def ones(num):
+    return [MyInt(1) for _ in range(num)]
 
 
 def array(list_):
