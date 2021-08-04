@@ -1,4 +1,4 @@
-def mi(p, q):
+def imp(p, q):
     """
     material implication
     单向导致 p -> q
