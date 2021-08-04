@@ -2,6 +2,7 @@ def imp(p, q):
     """
     material implication
     单向导致 p -> q
+    :param p:
     :param q:
     :return:逻辑判断结果
     """
